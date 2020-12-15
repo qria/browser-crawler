@@ -15,7 +15,8 @@ changeColor.onclick = function(element) {
   let color = element.target.value;
   chrome.tabs.executeScript(
     {
-      code: 'document.body.style.backgroundColor = "' + color + '";'
+      file: 'content_script.js'
     }
   );
+
 };

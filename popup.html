@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
-      button {
-        height: 30px;
-        width: 30px;
-        outline: none;
-      }
+        body {
+            width: 400px;
+            height: 300px;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        button {
+            outline: none;
+        }
     </style>
   </head>
   <body>
-    <button id="changeColor"></button>
+      <div class="container">
+          <h1>크롤러 프로토타입</h1>
+        <button class="btn btn-lg btn-block" id="changeColor">네이버 뉴스 헤드라인 다운로드</button>
+      </div>
     <script src="popup.js"></script>
   </body>
 </html>
