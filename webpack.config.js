@@ -89,6 +89,7 @@ var options = {
 
 if (env.NODE_ENV === "development") {
   options.devtool = "cheap-module-eval-source-map";
+  options.watch = true;
 }
 
 module.exports = options;
