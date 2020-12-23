@@ -24,7 +24,8 @@ var options = {
   entry: {
     popup: path.join(__dirname, "src", "js", "popup.js"),
     options: path.join(__dirname, "src", "js", "options.js"),
-    background: path.join(__dirname, "src", "js", "background.js")
+    background: path.join(__dirname, "src", "js", "background.js"),
+    contentScript: path.join(__dirname, "src", "js", "contentScript.js"),
   },
   output: {
     path: path.join(__dirname, "build"),
@@ -54,7 +55,11 @@ var options = {
   },
   plugins: [
     // clean the build folder
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      // manifest.json is added by CopyWebpackPlugin but this plugin tries to remove it
+      // as it is not used by webpack itself.
+      cleanAfterEveryBuildPatterns: ['!manifest.json'],
+    }),
     // expose and write the allowed env vars on the compiled bundle
     new webpack.EnvironmentPlugin(["NODE_ENV"]),
     new CopyWebpackPlugin([{
