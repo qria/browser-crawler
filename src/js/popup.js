@@ -1,12 +1,12 @@
 import "../css/bootstrap/bootstrap.css";
+import "../css/popup.css";
 import ExcelJS from 'exceljs';
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    let changeColor = document.getElementById('changeColor');
-    console.dir(changeColor)
+    let downloadButton = document.getElementById('downloadButton');
 
-    changeColor.onclick = function(element) {
+    downloadButton.onclick = function(element) {
         // const workbook = new ExcelJS.Workbook();
         chrome.tabs.executeScript(
             {
