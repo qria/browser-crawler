@@ -1,6 +1,5 @@
 import "../css/bootstrap/bootstrap.css";
-
-'use strict';
+import ExcelJS from 'exceljs';
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -8,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.dir(changeColor)
 
     changeColor.onclick = function(element) {
+        // const workbook = new ExcelJS.Workbook();
         chrome.tabs.executeScript(
             {
                 code: 'window.location = "https://news.naver.com/";',
