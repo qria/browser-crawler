@@ -5,6 +5,8 @@ Chrome browser extension to crawl in the local browser.
 
 ## Building
 
+Following command builds and turns on the watch mode to watch any changes.
+
 ```
 yarn build
 ```
