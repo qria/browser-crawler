@@ -1,8 +1,5 @@
-console.log('extension loaded')
-
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-        console.log('Message received')
         if (request.script != null) {
             try {
                 const data = eval(request.script);

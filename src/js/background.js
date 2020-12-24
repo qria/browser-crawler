@@ -11,7 +11,6 @@ window.data = data;
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         if(request.work != null) {
-            console.dir(sender);
             // start the crawling task
             chrome.tabs.create({
                 active: false,
