@@ -14,8 +14,7 @@ chrome.runtime.onMessage.addListener(
             console.dir(sender);
             // start the crawling task
             chrome.tabs.create({
-                // active: false,
-                // selected: false,
+                active: false,
                 pinned: true,
                 index: 0,
                 url: 'https://news.naver.com/',
