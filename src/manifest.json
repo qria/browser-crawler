@@ -2,7 +2,7 @@
   "name": "Browser Crawller",
   "version": "0.0",
   "description": "Crawl websites locally.",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "permissions": ["activeTab", "declarativeContent", "storage", "downloads"],
   "options_page": "options.html",
   "background": {
     "scripts": ["background.bundle.js"],
