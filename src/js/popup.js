@@ -8,11 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     downloadButton.onclick = function(element) {
         // const workbook = new ExcelJS.Workbook();
-        chrome.tabs.executeScript(
-            {
-                code: 'window.location = "https://news.naver.com/";',
-            }
-        );
-
+        chrome.runtime.sendMessage({work: true})
     };
 });
